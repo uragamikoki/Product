@@ -9,17 +9,29 @@ import SwiftUI
 
 struct ticketView: View {
     var ticket :TicketData
+    var dateFormat: DateFormatter{
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "ja_JP")
+        df.dateFormat = "YYYY/MM/dd"
+        return df
+    }
     var body: some View {
         VStack{
             Spacer()
-            Text(ticket.name)
-                .font(.system(size: 40))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 20.0)
+            HStack{
+                Text(ticket.name)
+                    .font(.system(size: 40))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 20.0)
+                Text(dateFormat.string(from: ticket.eventDate))
+                    .font(.title3)
+                    .padding(.trailing,30)
+            }
+            
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(lineWidth: 2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                     .frame(width: 310, height: 100)
                 Text(ticket.overview)
                     .frame(width: 290, height: 80, alignment: .topLeading)

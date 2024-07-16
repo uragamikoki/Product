@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Payment: View {
+    @State private var isShow: Bool = false
     var body: some View {
         VStack{
             Rectangle()
@@ -19,36 +20,71 @@ struct Payment: View {
                 .background(.gray)
                 .foregroundColor(.white)
             Spacer()
+            Button(){
+                isShow = true
+            }label: {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .foregroundColor(.blue)
+                    .frame(width: .infinity, height: 100)
+                    .padding(.horizontal)
+                    .overlay(Text("Paypal").font(.largeTitle).foregroundColor(.white))
+            }
+            .fullScreenCover(isPresented: $isShow){
+                Paycomplete()
+            }
             
-            RoundedRectangle(cornerRadius: 20.0)
-                .foregroundColor(.blue)
-                .frame(width: .infinity, height: 100)
-                .padding(.horizontal)
-                .overlay(Text("Paypal").font(.largeTitle).foregroundColor(.white))
+            Button(){
+                isShow = true
+            }label: {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .foregroundColor(.blue)
+                    .frame(width: .infinity, height: 100)
+                    .padding(.horizontal)
+                    .overlay(Text("クレジットカード").font(.largeTitle).foregroundColor(.white))
+            }
+            .fullScreenCover(isPresented: $isShow){
+                Paycomplete()
+            }
             
-            RoundedRectangle(cornerRadius: 20.0)
-                .foregroundColor(.blue)
-                .frame(width: .infinity, height: 100)
-                .padding(.horizontal)
-                .overlay(Text("クレジットカード").font(.largeTitle).foregroundColor(.white))
+            Button(){
+                isShow = true
+            }label: {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .foregroundColor(.blue)
+                    .frame(width: .infinity, height: 100)
+                    .padding(.horizontal)
+                    .overlay(Text("コンビニ支払い").font(.largeTitle).foregroundColor(.white))
+            }
+            .fullScreenCover(isPresented: $isShow){
+                Paycomplete()
+            }
             
-            RoundedRectangle(cornerRadius: 20.0)
-                .foregroundColor(.blue)
-                .frame(width: .infinity, height: 100)
-                .padding(.horizontal)
-                .overlay(Text("コンビニ支払い").font(.largeTitle).foregroundColor(.white))
+            Button(){
+                isShow = true
+            }label: {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .foregroundColor(.blue)
+                    .frame(width: .infinity, height: 100)
+                    .padding(.horizontal)
+                    .overlay(Text("Paypay").font(.largeTitle).foregroundColor(.white))
+            }
+            .fullScreenCover(isPresented: $isShow){
+                Paycomplete()
+            }
             
-            RoundedRectangle(cornerRadius: 20.0)
-                .foregroundColor(.blue)
-                .frame(width: .infinity, height: 100)
-                .padding(.horizontal)
-                .overlay(Text("Paypay").font(.largeTitle).foregroundColor(.white))
+            Button(){
+                isShow = true
+            }label: {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .foregroundColor(.blue)
+                    .frame(width: .infinity, height: 100)
+                    .padding(.horizontal)
+                    .overlay(Text("Apple Pay").font(.largeTitle).foregroundColor(.white))
+            }
+            .fullScreenCover(isPresented: $isShow){
+                Paycomplete()
+            }
             
-            RoundedRectangle(cornerRadius: 20.0)
-                .foregroundColor(.blue)
-                .frame(width: .infinity, height: 100)
-                .padding(.horizontal)
-                .overlay(Text("Apple Pay").font(.largeTitle).foregroundColor(.white))
             Spacer()
             Button(){
                 //back
