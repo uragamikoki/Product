@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB26F3372C461D00008A76F8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EB26F3362C461D00008A76F8 /* .gitignore */; };
 		EB4F3DA92C4614DC00229244 /* ProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3DA82C4614DC00229244 /* ProductApp.swift */; };
 		EB4F3DAB2C4614DC00229244 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3DAA2C4614DC00229244 /* ContentView.swift */; };
 		EB4F3DAD2C4614DD00229244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4F3DAC2C4614DD00229244 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB26F3362C461D00008A76F8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EB4F3DA52C4614DC00229244 /* Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4F3DA82C4614DC00229244 /* ProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApp.swift; sourceTree = "<group>"; };
 		EB4F3DAA2C4614DC00229244 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		EB4F3D9C2C4614DC00229244 = {
 			isa = PBXGroup;
 			children = (
+				EB26F3362C461D00008A76F8 /* .gitignore */,
 				EB4F3DA72C4614DC00229244 /* Product */,
 				EB4F3DB92C4614DD00229244 /* ProductTests */,
 				EB4F3DC32C4614DD00229244 /* ProductUITests */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4F3DB12C4614DD00229244 /* Preview Assets.xcassets in Resources */,
+				EB26F3372C461D00008A76F8 /* .gitignore in Resources */,
 				EB4F3DAD2C4614DD00229244 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
