@@ -20,6 +20,7 @@
 		EB9D3ED32C46506400B0F51A /* ticketPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D3ED22C46506400B0F51A /* ticketPage.swift */; };
 		EB9D3ED52C46506C00B0F51A /* ticketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D3ED42C46506C00B0F51A /* ticketView.swift */; };
 		EB9D3ED72C46507300B0F51A /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D3ED62C46507300B0F51A /* user.swift */; };
+		EB9D3ED92C4656EB00B0F51A /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D3ED82C4656EB00B0F51A /* Payment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EB9D3ED22C46506400B0F51A /* ticketPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketPage.swift; sourceTree = "<group>"; };
 		EB9D3ED42C46506C00B0F51A /* ticketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketView.swift; sourceTree = "<group>"; };
 		EB9D3ED62C46507300B0F51A /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		EB9D3ED82C4656EB00B0F51A /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				EB9D3ECE2C46504C00B0F51A /* ticket.swift */,
 				EB9D3ED22C46506400B0F51A /* ticketPage.swift */,
 				EB4F3DAA2C4614DC00229244 /* ContentView.swift */,
+				EB9D3ED82C4656EB00B0F51A /* Payment.swift */,
 				EB9D3EC42C464EEB00B0F51A /* regist.swift */,
 				EB4F3DAC2C4614DD00229244 /* Assets.xcassets */,
 				EB4F3DAE2C4614DD00229244 /* Product.entitlements */,
@@ -284,6 +287,7 @@
 				EB9D3ED52C46506C00B0F51A /* ticketView.swift in Sources */,
 				EB9D3ED32C46506400B0F51A /* ticketPage.swift in Sources */,
 				EB9D3ED72C46507300B0F51A /* user.swift in Sources */,
+				EB9D3ED92C4656EB00B0F51A /* Payment.swift in Sources */,
 				EB4F3DA92C4614DC00229244 /* ProductApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
