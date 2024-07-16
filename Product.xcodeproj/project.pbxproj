@@ -15,6 +15,7 @@
 		EB4F3DBB2C4614DD00229244 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3DBA2C4614DD00229244 /* ProductTests.swift */; };
 		EB4F3DC52C4614DD00229244 /* ProductUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3DC42C4614DD00229244 /* ProductUITests.swift */; };
 		EB4F3DC72C4614DD00229244 /* ProductUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3DC62C4614DD00229244 /* ProductUITestsLaunchTests.swift */; };
+		EB9D3EC52C464EEB00B0F51A /* regist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D3EC42C464EEB00B0F51A /* regist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EB4F3DC02C4614DD00229244 /* ProductUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4F3DC42C4614DD00229244 /* ProductUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUITests.swift; sourceTree = "<group>"; };
 		EB4F3DC62C4614DD00229244 /* ProductUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB9D3EC42C464EEB00B0F51A /* regist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = regist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				EB4F3DA82C4614DC00229244 /* ProductApp.swift */,
 				EB4F3DAA2C4614DC00229244 /* ContentView.swift */,
+				EB9D3EC42C464EEB00B0F51A /* regist.swift */,
 				EB4F3DAC2C4614DD00229244 /* Assets.xcassets */,
 				EB4F3DAE2C4614DD00229244 /* Product.entitlements */,
 				EB4F3DAF2C4614DD00229244 /* Preview Content */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9D3EC52C464EEB00B0F51A /* regist.swift in Sources */,
 				EB4F3DAB2C4614DC00229244 /* ContentView.swift in Sources */,
 				EB4F3DA92C4614DC00229244 /* ProductApp.swift in Sources */,
 			);
