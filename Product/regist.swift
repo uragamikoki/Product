@@ -24,10 +24,14 @@ struct regist: View {
         return df
     }
     var body: some View {
-        Spacer()
+        Rectangle()
+            .frame(height: 0)
+            .opacity(0)
         Text("会員情報登録")
             .font(.largeTitle)
-            .padding()
+            .frame(width: 400,height: 80)
+            .background(.gray)
+            .foregroundColor(.white)
         Spacer()
         GroupBox{
             Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 20){
