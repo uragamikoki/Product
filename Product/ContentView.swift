@@ -22,7 +22,6 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 ZStack{
-                    
                     Ellipse()
                         .stroke(lineWidth: 4)
                         .foregroundColor(.purple)
@@ -73,8 +72,8 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .padding(.bottom, 10.0)
                 }
-                .alert(isPresented: $isAlert){
-                    Alert(title: Text("OK"))
+                .fullScreenCover(isPresented: $isAlert){
+                    TopPage()
                 }
                 
                 Button(action: {}){

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Paycomplete: View {
     var ticket :TicketData
+    @State var top = false
     var body: some View {
         Rectangle()
             .frame(height: 0)
@@ -25,12 +26,15 @@ struct Paycomplete: View {
         ticketView(ticket: ticket)
             .padding(.horizontal)
         Spacer()
-        Button(action: {}){
+        Button(action: { top = true}){
             RoundedRectangle(cornerRadius: 30)
                 .stroke(lineWidth: 3.0)
                 .frame(width: 300, height: 50)
                 .overlay(Text("トップ画面に戻る").font(.title))
                 .foregroundColor(.black)
+        }
+        .fullScreenCover(isPresented: $top){
+            TopPage()
         }
     }
 }
