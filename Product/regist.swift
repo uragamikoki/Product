@@ -16,6 +16,7 @@ struct regist: View {
     @State var password: String = ""
     
     @State var isError = false
+    @State var login = false
     
     var dateFormat: DateFormatter{
         let df = DateFormatter()
@@ -118,6 +119,7 @@ struct regist: View {
             Alert(title: Text("会員登録"), message: Text("この内容で登録します。よろしいですか。"),
                   primaryButton: .default(Text("OK"), action: {
                 //登録処理
+                login = true
             }),
                   secondaryButton: .cancel(Text("キャンセル"), action: {
                 isError = false
@@ -125,12 +127,15 @@ struct regist: View {
             )
         }
         
-        Button(action: {}){
+        Button(action: {login = true}){
             RoundedRectangle(cornerRadius: 30)
                 .stroke(lineWidth: 3.0)
                 .frame(width: 300, height: 50)
                 .overlay(Text("キャンセル").font(.title))
                 .foregroundColor(.black)
+        }
+        .fullScreenCover(isPresented: $login){
+            ContentView()
         }
     }
 }
