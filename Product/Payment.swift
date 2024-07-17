@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Payment: View {
     @State private var isShow: Bool = false
+    @State private var isBack: Bool = false
+    var ticket :TicketData
     var body: some View {
         VStack{
             Rectangle()
@@ -30,7 +32,7 @@ struct Payment: View {
                     .overlay(Text("Paypal").font(.largeTitle).foregroundColor(.white))
             }
             .fullScreenCover(isPresented: $isShow){
-                Paycomplete()
+                Paycomplete(ticket: ticket)
             }
             
             Button(){
@@ -43,7 +45,7 @@ struct Payment: View {
                     .overlay(Text("クレジットカード").font(.largeTitle).foregroundColor(.white))
             }
             .fullScreenCover(isPresented: $isShow){
-                Paycomplete()
+                Paycomplete(ticket: ticket)
             }
             
             Button(){
@@ -56,7 +58,7 @@ struct Payment: View {
                     .overlay(Text("コンビニ支払い").font(.largeTitle).foregroundColor(.white))
             }
             .fullScreenCover(isPresented: $isShow){
-                Paycomplete()
+                Paycomplete(ticket: ticket)
             }
             
             Button(){
@@ -69,7 +71,7 @@ struct Payment: View {
                     .overlay(Text("Paypay").font(.largeTitle).foregroundColor(.white))
             }
             .fullScreenCover(isPresented: $isShow){
-                Paycomplete()
+                Paycomplete(ticket: ticket)
             }
             
             Button(){
@@ -82,15 +84,19 @@ struct Payment: View {
                     .overlay(Text("Apple Pay").font(.largeTitle).foregroundColor(.white))
             }
             .fullScreenCover(isPresented: $isShow){
-                Paycomplete()
+                Paycomplete(ticket: ticket)
             }
             
             Spacer()
             Button(){
                 //back
+                isBack = true
             }label: {
                 Text("戻る")
                     .font(.title)
+            }
+            .fullScreenCover(isPresented: $isBack){
+                ticketPage()
             }
 
         }
@@ -99,5 +105,5 @@ struct Payment: View {
 }
 
 #Preview {
-    Payment()
+    Payment(ticket: ticketArray[0])
 }

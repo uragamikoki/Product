@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Paycomplete: View {
+    var ticket :TicketData
     var body: some View {
         Rectangle()
             .frame(height: 0)
@@ -21,7 +22,7 @@ struct Paycomplete: View {
         Text("チケットの購入が完了しました。")
             .font(.title)
             .padding()
-        ticketView(ticket: ticketArray[0])
+        ticketView(ticket: ticket)
             .padding(.horizontal)
         Spacer()
         Button(action: {}){
@@ -35,5 +36,5 @@ struct Paycomplete: View {
 }
 
 #Preview {
-    Paycomplete()
+    Paycomplete(ticket: ticketArray[0])
 }

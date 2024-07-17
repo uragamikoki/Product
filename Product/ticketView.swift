@@ -50,6 +50,7 @@ struct ticketarea: View {
     var ticket :TicketData
     @State var isShow = false
     @State var isStep = false
+    @State var payment = false
     //タイマーの変数
     @State var timerHandler : Timer?
     var dateFormat: DateFormatter{
@@ -105,13 +106,16 @@ struct ticketarea: View {
                         Text(ticket.overview)
                             .frame(width: 290, height: 50, alignment: .topLeading)
                         Button(){
-                            
+                            payment = true
                         }label: {
                             Text("購入する")
                                 .frame(width: 100,height: 30)
                                 .background(.white)
                                 .cornerRadius(10)
                                 .frame(width: 300 ,alignment: .trailing)
+                        }
+                        .fullScreenCover(isPresented: $payment){
+                            Payment(ticket: ticket)
                         }
                     }
                     
