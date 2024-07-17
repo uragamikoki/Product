@@ -21,8 +21,23 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 Spacer()
-                Image(systemName: "square.and.arrow.up")
-                    .resizable()
+                ZStack{
+                    
+                    Ellipse()
+                        .stroke(lineWidth: 4)
+                        .foregroundColor(.purple)
+                        .frame(width: 100, height: 300)
+                        .rotationEffect(.degrees(30), anchor: .bottom)
+                    Ellipse()
+                        .stroke(lineWidth: 4)
+                        .foregroundColor(.blue)
+                        .frame(width: 100, height: 300)
+                        .rotationEffect(.degrees(-30), anchor: .bottom)
+                    Ellipse()
+                        .stroke(lineWidth: 4)
+                        .foregroundColor(.pink)
+                        .frame(width: 100, height: 300)
+                }
                     .frame(width: 300, height: 300)
                 Spacer()
                 TextField("mail", text: $mail)
